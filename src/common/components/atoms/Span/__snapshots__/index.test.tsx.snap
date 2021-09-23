@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Span/> with correct properties 1`] = `"<span class=\\"class\\" rel=\\"rel\\">Some text</span>"`;
+
+exports[`Renders <Span/> with only required props 1`] = `"<span></span>"`;

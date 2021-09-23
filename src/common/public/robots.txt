@@ -1,0 +1,3 @@
+Sitemap: https://travelix.io/sitemap.xml
+User-agent: *
+Disallow: /profile

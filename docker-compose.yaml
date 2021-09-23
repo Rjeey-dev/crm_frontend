@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  node-crm:
+    container_name: node-crm
+    build:
+      context: .
+      target: dev
+    user: root
+    working_dir: "/usr/src/app"
+    ports:
+    - "444:443"
+    volumes:
+    - ./:/usr/src/app:cached
+    command: npm start

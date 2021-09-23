@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Select/> with correct properties 1`] = `"<select class=\\"class\\"><option value=\\"value1\\">text1</option><option value=\\"value2\\">text2</option><option value=\\"value3\\">text3</option><option value=\\"value4\\">text4</option></select>"`;

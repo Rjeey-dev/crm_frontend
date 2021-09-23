@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <FormItem/> with correct properties with wrapper 1`] = `"<div class=\\"form-group\\"><div class=\\"input-group\\"><input aria-describedby=\\"undefinedError\\" error=\\"error\\" class=\\"form-control form-control-danger\\"/><div class=\\"input-group-append\\"><span class=\\"input-group-text input-group-text-danger\\"><i class=\\"mdi mdi-check-circle with-error\\"></i></span></div></div><label id=\\"undefinedError\\" class=\\"error mt-2 text-danger\\">Missing translationId:  for language: \${ languageCode }</label></div>"`;

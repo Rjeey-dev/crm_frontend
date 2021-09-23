@@ -1,0 +1,114 @@
+{
+  "activity-logs": [
+    {
+      "id": "d810d1ee-3b2c-4973-90e4-116c913607f3",
+      "userId": 1,
+      "title": {
+        "id": "common.profile_settings"
+      },
+      "description": {
+        "id": "activityLogs.profile.profile_info_has_been_changed"
+      },
+      "date": "2019-03-03T00:10:50+0300",
+      "images": [
+        "/static/images/samples/01.jpg",
+        "/static/images/samples/02.jpg",
+        "/static/images/samples/03.jpg",
+        "/static/images/samples/04.jpg",
+        "/static/images/samples/05.jpg",
+        "/static/images/samples/06.jpg"
+      ]
+    },
+    {
+      "id": "d810d1ee-222c-4973-90e4-133c912207f3",
+      "userId": 1,
+      "title": {
+        "id": "common.profile_settings"
+      },
+      "description": {
+        "id": "activityLogs.profile.password_has_been_changed"
+      },
+      "date": "2019-03-02T08:08:50+0300",
+      "images": [
+      ]
+    },
+    {
+      "id": "d810d1ee-222c-4973-90e4-116c912207f3",
+      "userId": 1,
+      "title": {
+        "id": "common.profile_settings"
+      },
+      "description": {
+        "id": "activityLogs.profile.password_has_been_changed"
+      },
+      "date": "2019-03-02T12:11:50+0300",
+      "images": [
+      ]
+    },
+    {
+      "id": "d810d1ee-222c-4973-90e4-116c913607f3",
+      "userId": 1,
+      "title": {
+        "id": "common.profile_settings"
+      },
+      "description": {
+        "id": "activityLogs.profile.password_has_been_changed"
+      },
+      "date": "2019-03-02T10:10:50+0300",
+      "images": [
+      ]
+    },
+    {
+      "id": "d810d1ee-3b2c-4973-90e4-336c913607f3",
+      "userId": 1,
+      "title": {
+        "id": "common.profile_settings"
+      },
+      "description": {
+        "id": "activityLogs.profile.profile_info_has_been_changed"
+      },
+      "date": "2018-12-28T13:20:25+0300",
+      "images": [
+      ]
+    },
+    {
+      "id": "d81221ee-3b2c-4973-90e4-116c913607f3",
+      "userId": 1,
+      "title": {
+        "id": "common.profile_settings"
+      },
+      "description": {
+        "id": "activityLogs.profile.profile_info_has_been_changed"
+      },
+      "date": "2018-12-28T10:01:12+0300",
+      "images": [
+      ]
+    },
+    {
+      "id": "d810d1ee-322c-4973-90e4-116c913607f3",
+      "userId": 1,
+      "title": {
+        "id": "common.profile_settings"
+      },
+      "description": {
+        "id": "activityLogs.profile.password_has_been_changed"
+      },
+      "date": "2018-12-27T22:01:04+0300",
+      "images": [
+      ]
+    },
+    {
+      "id": "d810d1ee-3b2c-4973-9111-116c913607f3",
+      "userId": 1,
+      "title": {
+        "id": "common.profile_settings"
+      },
+      "description": {
+        "id": "activityLogs.profile.password_has_been_changed"
+      },
+      "date": "2018-12-27T22:01:00+0300",
+      "images": [
+      ]
+    }
+  ]
+}

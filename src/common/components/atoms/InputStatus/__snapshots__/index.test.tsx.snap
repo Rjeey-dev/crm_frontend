@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <InputStatus/> default and not valid 1`] = `"<div class=\\"input-group-append\\"><span class=\\"input-group-text input-group-text-danger\\"><i class=\\"mdi mdi-check-circle with-error\\"></i></span></div>"`;
+
+exports[`Renders <InputStatus/> default and valid 1`] = `"<div class=\\"input-group-append\\"><span class=\\"input-group-text\\"><i class=\\"mdi mdi-check-circle-outline\\"></i></span></div>"`;
+
+exports[`Renders <InputStatus/> not default and not valid 1`] = `"<div class=\\"input-group-append\\"><span class=\\"input-group-text input-group-text-danger\\"><i class=\\"mdi mdi-check-circle with-error\\"></i></span></div>"`;
+
+exports[`Renders <InputStatus/> not default and valid 1`] = `"<div class=\\"input-group-append\\"><span class=\\"input-group-text\\"><i class=\\"mdi mdi-check-circle\\"></i></span></div>"`;

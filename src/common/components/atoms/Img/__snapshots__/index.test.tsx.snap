@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Img/> with correct properties 1`] = `"<img class=\\"class\\" src=\\"/images/image.png\\" alt=\\"alt\\" title=\\"title\\" width=\\"30\\"/>"`;
+
+exports[`Renders <Img/> with only required props 1`] = `"<img src=\\"/images/image.png\\"/>"`;

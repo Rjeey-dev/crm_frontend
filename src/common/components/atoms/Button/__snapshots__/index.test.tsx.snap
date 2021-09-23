@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Button/> with correct properties 1`] = `"<button disabled=\\"\\" class=\\"class\\"><i class=\\"icon\\"></i>Text</button>"`;
+
+exports[`Renders <Button/> with only required props 1`] = `"<button></button>"`;

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Checkbox/> with correct properties 1`] = `"<div class=\\"form-check form-check-flat mt-0\\"><label class=\\"form-check-label\\"><input type=\\"checkbox\\" class=\\"class\\" checked=\\"\\"/><i class=\\"icon\\"></i><i class=\\"input-helper\\"></i></label></div>"`;
+
+exports[`Renders <Checkbox/> with only required props 1`] = `"<div class=\\"form-check form-check-flat mt-0\\"><label class=\\"form-check-label\\"><input type=\\"checkbox\\" class=\\"class\\" checked=\\"\\"/><i class=\\"input-helper\\"></i></label></div>"`;

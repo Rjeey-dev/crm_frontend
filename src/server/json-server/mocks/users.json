@@ -1,0 +1,36 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "name": "Alexandr Abashyn",
+            "login": "travelguy_228",
+            "email": "alex_soft@email.com",
+            "password": "aaaaaaaa",
+            "image": "/static/images/faces/face1.jpg",
+            "settings": {
+                "theme": "dark",
+                "lang": "en"
+            },
+            "role": "admin",
+            "created": "2018-11-28t13:50:50+0300",
+            "verified": true,
+            "active": true
+        },
+        {
+            "id": "2",
+            "name": "AlexManager",
+            "login": "manager",
+            "email": "alex_manager@email.com",
+            "password": "bbbbbbbb",
+            "image": "/static/images/faces/face2.jpg",
+            "settings": {
+                "theme": "dark",
+                "lang": "en"
+            },
+            "role": "manager",
+            "created": "2018-11-28T13:50:50+0300",
+            "verified": false,
+            "active": true
+        }
+    ]
+}

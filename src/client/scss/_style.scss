@@ -1,0 +1,12 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+//@import '_variables';
+
+@import 'mixins/_variables';
+@import 'mixins/full_screen_preloader';
+@import 'mixins/preloader';
+@import 'mixins/modals';
+@import "pages/_common_auth";
+@import "pages/_dashboard";
+@import "_fonts";
+

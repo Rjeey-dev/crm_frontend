@@ -1,0 +1,23 @@
+{
+    "mails": [
+        {
+            "src": "/static/images/faces/face5.jpg",
+            "name": "David Grey",
+            "date": "1 Minutes ago",
+            "text": "The meeting is cancelled"
+        },
+        {
+            "src": "/static/images/faces/face6.jpg",
+            "name": "Tim Cook",
+            "date": "15 Minutes ago",
+            "text": "New product launch"
+        },
+        {
+            "src": "/static/images/faces/face7.jpg",
+            "name": "Johnson",
+            "date": "18 Minutes ago",
+            "text": "Upcoming board meeting"
+        }
+    ]
+}
+

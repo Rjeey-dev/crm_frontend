@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Input/> select 1`] = `"<select classes=\\"class\\" type=\\"select\\"></select>"`;
+
+exports[`Renders <Input/> text 1`] = `"<input classes=\\"class\\"/>"`;
+
+exports[`Renders <Input/> textarea 1`] = `"<textarea classes=\\"class\\" type=\\"textarea\\"></textarea>"`;

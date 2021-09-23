@@ -1,0 +1,220 @@
+{
+    "notifications": [
+        {
+            "id": "d810d1ee-3b2c-4973-90e4-116c913607f3",
+            "userId": 1,
+            "image": "/static/images/faces/face3.jpg",
+            "name": "shedule",
+            "date": "2018-12-28T13:50:50+0300",
+            "text": {
+                "id": "common.purchase_failed"
+            },
+            "type": "danger",
+            "read": false
+        },
+        {
+            "id": "d810d1ee-222c-4973-90e4-116c913607f3",
+            "userId": 1,
+            "image": "/static/images/faces/face4.jpg",
+            "name": "shedule",
+            "date": "2018-12-28T13:20:25+0300",
+            "text": {
+                "id": "common.purchase_failed"
+            },
+            "type": "danger",
+            "read": false
+        },
+        {
+            "id": "d810d1ee-3b2c-4973-90e4-336c913607f3",
+            "userId": 1,
+            "image": "/static/images/faces/face2.jpg",
+            "name": "shedule",
+            "date": "2018-12-28T10:01:12+0300",
+            "text": {
+                "id": "common.email_is_not_verified"
+            },
+            "type": "warning",
+            "read": false
+        },
+        {
+            "id": "d81221ee-3b2c-4973-90e4-116c913607f3",
+            "userId": 1,
+            "image": "/static/images/faces/face3.jpg",
+            "name": "shedule",
+            "date": "2018-12-27T22:01:04+0300",
+            "text": {
+                "id": "common.email_is_not_verified"
+            },
+            "type": "warning",
+            "read": false
+        },
+        {
+            "id": "uu10d1ee-3b2c-4973-90e4-116c913607f3",
+            "userId": 1,
+            "image": "/static/images/faces/face3.jpg",
+            "name": "shedule",
+            "date": "2018-12-27T22:01:00+0300",
+            "text": {
+                "id": "common.thanks_for_registration"
+            },
+            "type": "info",
+            "read": true
+        },
+        {
+            "id": "d824a1ee-3b2c-4973-90e4-116c913607f3",
+            "userId": 1,
+            "image": "/static/images/faces/face3.jpg",
+            "name": "shedule",
+            "date": "2018-12-27T20:00:58+0300",
+            "text": {
+                "id": "common.thanks_for_registration"
+            },
+            "type": "info",
+            "read": false
+        },
+        {
+            "id": "d810d1ee-3b2c-4973-90e4-122c913617f3",
+            "userId": 1,
+            "image": "/static/images/faces/success.png",
+            "name": "shedule",
+            "date": "2018-10-28T10:01:04+0300",
+            "text": {
+                "id": "common.password_has_been_sent_to_email"
+            },
+            "type": "success",
+            "read": true
+        },
+        {
+            "id": "d810d1ee-3b2c-4973-22e4-122c913617f3",
+            "userId": 1,
+            "image": "/static/images/faces/success.png",
+            "name": "security",
+            "date": "2018-10-31T10:01:04+0300",
+            "text": {
+                "id": "common.password_has_been_sent_to_email"
+            },
+            "type": "success",
+            "read": false
+        },
+        {
+            "id": "d810d1ee-3b2c-4113-90e4-122c913617f3",
+            "userId": 1,
+            "image": "/static/images/faces/success.png",
+            "name": "security",
+            "date": "2018-10-23T10:01:04+0300",
+            "text": {
+                "id": "common.password_has_been_sent_to_email"
+            },
+            "type": "success",
+            "read": false
+        },
+        {
+            "id": "d810d1ee-aa2c-4973-90e4-122c913617f3",
+            "userId": 1,
+            "image": "/static/images/faces/success.png",
+            "name": "security",
+            "date": "2018-11-28T10:01:04+0300",
+            "text": {
+                "id": "common.password_has_been_sent_to_email"
+            },
+            "type": "success",
+            "read": false
+        },
+        {
+            "id": "d810d1ee-3b2c-tt73-90e4-122c913617f3",
+            "userId": 1,
+            "image": "/static/images/faces/success.png",
+            "name": "security",
+            "date": "2018-12-28T10:01:04+0300",
+            "text": {
+                "id": "common.password_has_been_sent_to_email"
+            },
+            "type": "success",
+            "read": false
+        },
+        {
+            "id": "d810vvee-3b2c-4973-90e4-122c913617f3",
+            "userId": 1,
+            "image": "/static/images/faces/success.png",
+            "name": "security",
+            "date": "2018-10-21T10:01:04+0300",
+            "text": {
+                "id": "common.password_has_been_sent_to_email"
+            },
+            "type": "success",
+            "read": false
+        },
+        {
+            "id": "d810d1ee-3bbc-4973-90e4-122c913617f3",
+            "userId": 1,
+            "image": "/static/images/faces/success.png",
+            "name": "security",
+            "date": "2018-11-23T10:01:04+0300",
+            "text": {
+                "id": "common.password_has_been_sent_to_email"
+            },
+            "type": "success",
+            "read": false
+        },
+        {
+            "id": "d810d1ee-3b2c-4973-90e4-133c913617f3",
+            "userId": 1,
+            "image": "/static/images/faces/success.png",
+            "name": "security",
+            "date": "2018-10-29T10:01:04+0300",
+            "text": {
+                "id": "common.password_has_been_sent_to_email"
+            },
+            "type": "success",
+            "read": false
+        },
+        {
+            "id": "d810qqee-3b2c-4973-90e4-122c913617f3",
+            "userId": 1,
+            "image": "/static/images/faces/success.png",
+            "name": "security",
+            "date": "2018-11-11T10:01:04+0300",
+            "text": {
+                "id": "common.password_has_been_sent_to_email"
+            },
+            "type": "success",
+            "read": false
+        },
+        {
+            "id": "d810d1ee-3b2c-bb73-90e4-122c913617f3",
+            "userId": 1,
+            "image": "/static/images/faces/success.png",
+            "name": "security",
+            "date": "2018-10-27T10:01:04+0300",
+            "text": {
+                "id": "common.password_has_been_sent_to_email"
+            },
+            "type": "success",
+            "read": false
+        },
+        {
+            "id": "d810d11e-3b2c-4973-90e4-122c913617f3",
+            "userId": 1,
+            "image": "/static/images/faces/success.png",
+            "name": "security",
+            "date": "2018-10-27T10:22:04+0300",
+            "text": {
+                "id": "common.password_has_been_sent_to_email"
+            },
+            "type": "success",
+            "read": false
+        },
+        {
+            "id": "d810d1ee-4444-4973-90e4-116c913607f3",
+            "userId": 2,
+            "image": "/static/images/faces/face3.jpg",
+            "name": "shedule",
+            "date": "2018-12-28T13:50:50+0300",
+            "text": {
+                "id": "common.password_has_been_sent_to_email"
+            },
+            "type": "info",
+            "read": false
+        }
+    ]
+}

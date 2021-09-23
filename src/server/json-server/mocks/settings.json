@@ -1,0 +1,12 @@
+{
+  "themes": [
+    {
+      "isActive": true,
+      "name": "dark"
+    },
+    {
+      "isActive": true,
+      "name": "light"
+    }
+  ]
+}

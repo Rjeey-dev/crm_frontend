@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Column/> with correct properties 1`] = `"<div class=\\"col-sm-6\\"><i class=\\"icon\\"></i></div>"`;
+
+exports[`Renders <Column/> with only required props 1`] = `"<div class=\\"col-sm-9\\"><i class=\\"icon\\"></i></div>"`;

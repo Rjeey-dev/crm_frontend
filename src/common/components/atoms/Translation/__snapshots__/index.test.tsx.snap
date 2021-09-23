@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Translation/> with correct properties 1`] = `"Missing translationId: some_id for language: \${ languageCode }"`;
+
+exports[`Renders <Translation/> with data 1`] = `"Missing translationId: some_id_with_dynamic_translation for language: \${ languageCode }"`;

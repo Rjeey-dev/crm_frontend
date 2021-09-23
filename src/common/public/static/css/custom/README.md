@@ -1,0 +1,1 @@
+Custom CSS styles. Should be ignored by git. CSS styles complies automatically during development and during build process.

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Link/> with correct properties 1`] = `"<a href=\\"/login\\" id=\\"login-link\\" class=\\"class\\" lang=\\"en\\"><i class=\\"icon\\"></i>Some text<div class=\\"form-check form-check-flat mt-0\\"><label class=\\"form-check-label\\"><input type=\\"checkbox\\" checked=\\"\\"/><i class=\\"input-helper\\"></i></label></div></a>"`;
+
+exports[`Renders <Link/> with only required props 1`] = `"<a href=\\"#\\"><i class=\\"icon\\"></i></a>"`;

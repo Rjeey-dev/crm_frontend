@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <ListItem/> with correct properties 1`] = `"<li class=\\"class\\"><i class=\\"icon\\"></i></li>"`;
+
+exports[`Renders <ListItem/> with only required props 1`] = `"<li><i class=\\"icon\\"></i></li>"`;

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Icon/> with attributes 1`] = `"<i class=\\"class\\"></i>"`;
+
+exports[`Renders <Icon/> with correct properties 1`] = `"<i class=\\"class\\"></i>"`;

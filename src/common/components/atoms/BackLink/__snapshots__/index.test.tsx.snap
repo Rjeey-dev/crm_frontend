@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <BackLink/> with correct properties 1`] = `
+<a
+  className="class"
+  href="#back"
+>
+  Some text
+</a>
+`;
