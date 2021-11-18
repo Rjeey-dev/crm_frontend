@@ -41,7 +41,7 @@ function withModalForm<T extends WithModalOpenNative>(WrappedComponent: Componen
                 <Span onClick={this.handleOpenClick}>
                     {this.props.button}
                 </Span>
-                <ReactModal formMode={true} handleClose={this.closeModal} isOpen={this.state.modalIsOpen}>
+                <ReactModal withoutButtons={true} handleClose={this.closeModal} isOpen={this.state.modalIsOpen}>
                     {childrenWithProps}
                 </ReactModal>
             </WrappedComponent>

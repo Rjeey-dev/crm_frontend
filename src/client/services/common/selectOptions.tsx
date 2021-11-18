@@ -1,45 +1,12 @@
-import {banUserOptions, routePackagesRejectModerationOptions, unbanUserOptions, userRoles} from "client/config";
-import {
-    generateBanUserTranslation,
-    generateRoutePackageRejectModerationTranslation, generateUnBanUserTranslation,
-    generateUserRoleTranslation
-} from "services/common/translations";
-import {isAnonymousByRole} from "store/users/selectors";
+import {IUser} from "store/users/interfaces";
 
-export const generateRejectModerationsOptions = () => {
-    return routePackagesRejectModerationOptions.map((option: any) => {
+export const generateUsersIdsOptions = (users: IUser[], currentUserId: string) => {
+    return users.filter((user: IUser) => {
+        return user.id !== currentUserId;
+    }).map((user: IUser) => {
         return {
-            value: option.id,
-            label: generateRoutePackageRejectModerationTranslation(option.id)
-        }
-    });
-};
-
-export const generateBanUserOptions = () => {
-    return banUserOptions.map((option: any) => {
-        return {
-            value: option.id,
-            label: generateBanUserTranslation(option.id)
-        }
-    });
-};
-
-export const generateUnBanUserOptions = () => {
-    return unbanUserOptions.map((option: any) => {
-        return {
-            value: option.id,
-            label: generateUnBanUserTranslation(option.id)
-        }
-    });
-};
-
-export const generateUserRolesOptions = () => {
-    return userRoles.filter((role: string) => {
-        return !isAnonymousByRole(role);
-    }).map((role: string) => {
-        return {
-            value: role,
-            label: generateUserRoleTranslation(role)
+            value: user.id,
+            label: user.name
         }
     });
 };

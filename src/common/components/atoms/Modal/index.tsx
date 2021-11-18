@@ -21,8 +21,8 @@ const customStyles = {
 
 Modal.setAppElement('#app');
 
-const renderFooter = (isFormMode: boolean, handleClose: any, handleClick: any) => {
-    if (isFormMode) {
+const renderFooter = (withoutButtonsEnabled: boolean, handleClose: any, handleClick: any) => {
+    if (withoutButtonsEnabled) {
         return '';
     }
 
@@ -42,8 +42,8 @@ const renderChildren = (children: any, isFormMode: boolean, handleCloseModal: an
 
 class ReactModal extends Component<IProps> {
     public render() {
-        const {children, classes, overlayClasses, isOpen, handleClick, handleClose, formMode} = this.props;
-        const isFormMode = formMode ? formMode : false;
+        const {children, classes, overlayClasses, isOpen, handleClick, handleClose, withoutButtons} = this.props;
+        const withoutButtonsEnabled = withoutButtons ? withoutButtons : false;
 
         const modalClasses = [classes, 'modal-block'].join(' ');
 
@@ -59,8 +59,8 @@ class ReactModal extends Component<IProps> {
                 </Span>
                 <Close/>
             </Button>
-            <div className='content-wrapper'>{renderChildren(children, isFormMode, handleClose)}</div>
-            {renderFooter(isFormMode, handleClose, handleClick)}
+            <div className='content-wrapper'>{renderChildren(children, withoutButtonsEnabled, handleClose)}</div>
+            {renderFooter(withoutButtonsEnabled, handleClose, handleClick)}
         </Modal>;
     }
 }

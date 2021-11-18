@@ -4,6 +4,8 @@ import Select from "react-select";
 import CreatableSelect from 'react-select/creatable';
 
 import {IOption, IProps} from "./interfaces";
+import Label from "atoms/Label";
+import Translation from "atoms/Translation";
 
 export const getSelectValue = (options: any[], defaultValueSource: number | string) => {
     const value = options.filter(option => option.value === defaultValueSource);
@@ -88,5 +90,8 @@ export const ReactSelect = (props: IProps) => {
         return <CreatableSelect {...selectProps}/>
     }
 
-    return <Select {...selectProps}/>
+    return <div className='form-group'>
+        <Label classes='label'><Translation source={props.label}/></Label>
+        <Select {...selectProps}/>
+    </div>
 };

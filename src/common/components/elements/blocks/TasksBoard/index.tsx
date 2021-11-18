@@ -40,8 +40,5 @@ export default function TasksBoard(props: IProps) {
                 </div>
             </div>
         </div>
-        <div className="d-block text-right card-footer">
-            <button className="btn btn-primary" data-toggle="modal" data-target="#modalAdd">Add Task</button>
-        </div>
     </div>
 }

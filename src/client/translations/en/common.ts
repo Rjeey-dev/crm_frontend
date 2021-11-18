@@ -974,4 +974,6 @@ export const common = {
     'has_packages_on_moderation': 'package on moderation',
     'view_user': 'view user',
     'write_comment_to_user': 'write comment to user',
+    'recipient': 'recipient',
+    'start_date': 'start date',
 };

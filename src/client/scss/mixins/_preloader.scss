@@ -1,6 +1,13 @@
 $spinkit-size: 24px !default;
 $spinkit-spinner-color: #337ab7 !default;
 
+#task-board-preloader {
+  .ssc-card {
+    min-height: 300px;
+    background: #cccccc40;
+  }
+}
+
 .sk-double-bounce {
   width: $spinkit-size;
   height: $spinkit-size;

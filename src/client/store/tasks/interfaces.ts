@@ -13,7 +13,16 @@ export interface ITask {
     id: number,
     name: string,
     status: number,
-    created: Date
+    created: Date,
+    recipient: ITaskUser,
+    owner: ITaskUser
+}
+
+export interface ITaskUser {
+    id: string,
+    name: string,
+    login: string,
+    image: string,
 }
 
 export interface onTasksBoardInitializedEvent {

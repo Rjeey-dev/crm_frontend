@@ -27,6 +27,10 @@ import {
     onUnSuccessfulGoogleLogin,
     onUserLoggedIn,
 } from './actions';
+import {ON_TASKS_BOARD_INITIALIZED_SUCCESS} from "store/tasks/actions";
+import {onTasksBoardInitializedSuccessEvent} from "store/tasks/interfaces";
+import {onEntitiesFetchedSuccessful} from "store/entities/actions";
+import {KEY_USERS} from "store/entities/schemas";
 
 export function* watchSuccessfulGoogleLogin(users: IUsers, event: ISuccessfulGoogleLoginEvent): SagaIterator {
     try {
@@ -80,8 +84,16 @@ export function* watchUserLogout(users: IUsers): SagaIterator {
     }
 }
 
+export function* watchTaskBoardInitialized(users: IUsers, event: onTasksBoardInitializedSuccessEvent): SagaIterator {
+    const response = Object(yield makeHttpCall([users, users.getAll]));
+
+    // @ts-ignore
+    yield put(onEntitiesFetchedSuccessful(response.items, KEY_USERS));
+}
+
 export default function* ({ users }: {users: IUsers}): SagaIterator {
     yield takeLatest(ON_USER_LOGGED_IN, watchUserLogin);
     yield takeLatest(ON_USER_LOGOUT, watchUserLogout, users);
     yield takeLatest(ON_SUCCESSFUL_GOOGLE_LOGIN, watchSuccessfulGoogleLogin, users);
+    yield takeLatest(ON_TASKS_BOARD_INITIALIZED_SUCCESS, watchTaskBoardInitialized, users);
 }

@@ -12,11 +12,7 @@ class Users implements IUsers {
     }
 
     public getAll = (): IUser[] | ApiException => {
-        return this.state.api.get('/admin/users') as IUser[];
-    };
-
-    public get = (userId: string): IUser | ApiException => {
-        return this.state.api.get('/admin/users/' + userId) as IUser;
+        return this.state.api.get('/v1/users') as IUser[];
     };
 
     public logout = (): ApiException => {
@@ -30,14 +26,6 @@ class Users implements IUsers {
         this.state.api.setToken(payload.token);
 
         return this.state.api.post('/v1/auth/google', payload) as IAuthResponse;
-    };
-
-    public delete = (userId: string): ApiException => {
-        return this.state.api.delete('/admin/users/' + userId) as any;
-    };
-
-    public update = (userId: string, data: any): ApiException => {
-        return this.state.api.patch('/admin/users/' + userId, data) as any;
     };
 }
 

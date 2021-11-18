@@ -7,5 +7,5 @@ export interface IProps {
     classes?:string,
     overlayClasses?:string,
     children: any,
-    formMode?: boolean
+    withoutButtons?: boolean
 }

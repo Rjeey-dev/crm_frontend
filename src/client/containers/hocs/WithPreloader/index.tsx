@@ -6,8 +6,10 @@ import {IBaseState} from "store/interfaces";
 import {buildComplexPreloaderInitialActionName} from "store/settings/preloader";
 import {getPreloaders, normalizeState} from "store/settings/selectors";
 import {IMapStateToProps, IProps} from "./interfaces";
+import TaskBoard from "elements/blocks/Preloaders/TaskBoard";
 
 export const PRELOADER_SIMPLE_PRELOADER = 'PRELOADER_SIMPLE_PRELOADER';
+export const PRELOADER_TASK_BOARD = 'PRELOADER_TASK_BOARD';
 
 function withPreloader(WrappedComponent: any, action: string, type?: string, id?: string): any {
     const mapStateToProps = (state: IBaseState): IMapStateToProps => {
@@ -23,6 +25,10 @@ function withPreloader(WrappedComponent: any, action: string, type?: string, id?
             if (this.props.preloaders[actionName] === true) {
                 if (!type || type === PRELOADER_SIMPLE_PRELOADER) {
                     return <SimplePreloader/>;
+                }
+
+                if (!type || type === PRELOADER_TASK_BOARD) {
+                    return <TaskBoard/>;
                 }
             }
 

@@ -14,5 +14,6 @@ export interface IProps {
     classes?: string,
     isMulti?: boolean,
     isCreatable?: boolean,
-    defaultValue?: number
+    defaultValue?: number,
+    label: TranslateProps
 }

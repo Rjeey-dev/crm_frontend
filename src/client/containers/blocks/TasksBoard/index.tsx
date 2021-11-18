@@ -9,7 +9,13 @@ import {IBaseState} from "store/interfaces";
 import {getEntitiesState, getList} from "store/entities/selectors";
 import {KEY_TASKS} from "store/entities/schemas";
 import {ITask} from "store/tasks/interfaces";
-import {onTasksBoardInitialized} from "store/tasks/actions";
+import {ON_TASKS_BOARD_INITIALIZED, onTasksBoardInitialized} from "store/tasks/actions";
+import withPreloader, {PRELOADER_TASK_BOARD} from "containers/hocs/WithPreloader";
+import AddTask from "containers/forms/AddTask";
+import withModalForm from "hocs/WithModalForm";
+import Span from "atoms/Span";
+
+const WithModal = withModalForm(Span);
 
 const mapDispatchToProps = (dispatch: Dispatch): IMapDispatchToProps => {
     return {
@@ -29,7 +35,14 @@ export class TasksBoardBlock extends Component<IProps> {
     }
 
     public render() {
-        return <TasksBoard tasks={this.props.tasks}/>;
+        const WithPreloader = withPreloader(TasksBoard, ON_TASKS_BOARD_INITIALIZED, PRELOADER_TASK_BOARD);
+
+        return <>
+            <WithPreloader tasks={this.props.tasks}/>
+            <div className="d-block text-right card-footer">
+                <WithModal classes="btn btn-primary btn-success" button='Add task'><AddTask/></WithModal>
+            </div>
+        </>;
     }
 }
 

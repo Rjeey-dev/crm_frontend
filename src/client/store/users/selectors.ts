@@ -68,6 +68,16 @@ export const getUser = (state: IAuthState): IUser | undefined => {
     return undefined;
 };
 
+export const getUsers = (state: IAuthState): IUser | undefined => {
+    const normalizedState = ('app' in state) ? Object.assign({}, normalizeState(state)) : state;
+
+    if ('user' in normalizedState.auth && 'id' in normalizedState.auth.user && normalizedState.auth.user.id !== '') {
+        return normalizedState.auth.user;
+    }
+
+    return undefined;
+};
+
 const getUserObject = (state: IAuthState): IUser => {
     const normalizedState = ('app' in state) ? Object.assign({}, normalizeState(state)) : state;
 
