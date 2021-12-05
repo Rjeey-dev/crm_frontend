@@ -12,7 +12,7 @@ import {onTaskChangeStatus, onTaskDelete} from "store/tasks/actions";
 const mapDispatchToProps = (dispatch: Dispatch): IMapDispatchToProps => {
     return {
         onTaskChangeStatus: (task: ITask, status: number) => dispatch(onTaskChangeStatus(task, status)),
-        onTaskDelete: (task: ITask) => dispatch(onTaskDelete(task))
+        onTaskDelete: (task: ITask) => dispatch(onTaskDelete(task)),
     }
 }
 

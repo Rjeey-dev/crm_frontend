@@ -3,6 +3,7 @@ import {languages} from "client/config";
 export const URL_HOME = '/';
 export const URL_HOME_LOCALIZED = '/:lang';
 export const URL_DASHBOARD = '/:lang/dashboard';
+export const URL_STATISTICS = '/:lang/dashboard/statistics';
 export const URL_AUTH_GOOGLE_REDIRECT = '/google-auth';
 export const URL_DENIED = '/:lang/denied';
 export const URL_NOT_FOUND = '/:lang/not-found';

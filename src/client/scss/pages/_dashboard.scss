@@ -144,7 +144,7 @@
 
 
     .scroll-area-sm {
-      height: 900px;
+      height: 700px;
       overflow-x: hidden;
       overflow-y: overlay;
 
@@ -209,12 +209,28 @@
                 align-items: center;
                 justify-content: space-between;
                 margin-top: 10px;
+                flex-direction: column;
                 .widget-content-left {
+                  width: 100%;
                   .upper {
                     font-size: 18px;
+                    .widget-heading {
+                      word-break: break-all;
+                    }
+                    #common-information {
+                      p {
+                        font-size: 10px;
+                        color: #8e8e8e;
+                      }
+                    }
                   }
                   .bottom {
                     margin-top: 10px;
+                  }
+                }
+                .widget-content-right {
+                  span.btn {
+                    margin-left: 10px;
                   }
                 }
               }

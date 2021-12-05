@@ -8,11 +8,7 @@ import Form from 'common/components/molecules/Form/index';
 import {IUser} from "store/users/interfaces";
 import FormItem from "molecules/FormItem";
 import withPreloader, {PRELOADER_SIMPLE_PRELOADER} from "containers/hocs/WithPreloader";
-import {ON_CREATE_NEW_TASK} from "store/tasks/actions";
-import DatePicker from "atoms/DatePicker";
-import {ReactSelect} from "atoms/ReactSelect";
-import {generateUsersIdsOptions} from "services/common/selectOptions";
-import withCurrentUser from "containers/hocs/WithCurrentUser";
+import {ON_EDIT_TASK} from "store/tasks/actions";
 import TextEditor from "atoms/TextEditor";
 
 interface IProps {
@@ -24,7 +20,7 @@ interface IProps {
     users: IUser[]
 }
 
-class AddTask extends Component<IProps> {
+class EditTask extends Component<IProps> {
     private handleSubmit = (event: any) => {
         this.props.handleSubmit(event);
 
@@ -32,14 +28,13 @@ class AddTask extends Component<IProps> {
     }
 
     public render() {
-        const WithPreloader = withPreloader(Button, ON_CREATE_NEW_TASK, PRELOADER_SIMPLE_PRELOADER);
+        const WithPreloader = withPreloader(Button, ON_EDIT_TASK, PRELOADER_SIMPLE_PRELOADER);
 
         return <div className="auto-form-wrapper" id='add-review-to-user'>
                 <Form onSubmit={this.handleSubmit}>
+                    <Field name='id' component={FormItem} type='hidden' withoutStatus={true}/>
                     <Field name='name' component={FormItem} label={translation('common.name')} placeholder='name'/>
                     <Field name='text' component={TextEditor} label={translation('common.text')} placeholder='text'/>
-                    <Field name='recipient' component={ReactSelect} label={translation('common.recipient')} options={generateUsersIdsOptions(this.props.users, this.props.currentUser.id)}/>
-                    <Field name='start_date' component={DatePicker} label={translation('common.start_date')} placeholder='5'/>
                     <div className='form-group'>
                         <WithPreloader disabled={this.props.submitting || this.props.pristine} classes='btn btn-success mr-2'>
                             <Translation source={translation('common.submit')}/>
@@ -50,4 +45,4 @@ class AddTask extends Component<IProps> {
     }
 }
 
-export default withCurrentUser(AddTask);
+export default EditTask;

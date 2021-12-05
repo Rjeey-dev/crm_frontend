@@ -6,7 +6,7 @@ import {connect} from "react-redux";
 import {IMapDispatchToProps, IMapStateToProps, IProps} from "./interfaces";
 import TasksBoard from "elements/blocks/TasksBoard";
 import {IBaseState} from "store/interfaces";
-import {getEntitiesState, getList} from "store/entities/selectors";
+import {entitiesAreEqual, getEntitiesState, getList} from "store/entities/selectors";
 import {KEY_TASKS} from "store/entities/schemas";
 import {ITask} from "store/tasks/interfaces";
 import {ON_TASKS_BOARD_INITIALIZED, onTasksBoardInitialized} from "store/tasks/actions";
@@ -32,6 +32,10 @@ const mapStateToProps = (state: IBaseState): IMapStateToProps => {
 export class TasksBoardBlock extends Component<IProps> {
     public componentDidMount() {
         this.props.onTasksBoardInitialized();
+    }
+
+    public shouldComponentUpdate(props: IProps) {
+        return !entitiesAreEqual(this.props.tasks, props.tasks, 'id');
     }
 
     public render() {

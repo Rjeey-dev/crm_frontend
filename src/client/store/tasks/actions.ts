@@ -15,6 +15,10 @@ export const ON_CREATE_NEW_TASK = 'ON_CREATE_NEW_TASK';
 export const ON_CREATE_NEW_TASK_SUCCESS = 'ON_CREATE_NEW_TASK_SUCCESS';
 export const ON_CREATE_NEW_TASK_FAIL = 'ON_CREATE_NEW_TASK_FAIL';
 
+export const ON_EDIT_TASK = 'ON_EDIT_TASK';
+export const ON_EDIT_TASK_SUCCESS = 'ON_EDIT_TASK_SUCCESS';
+export const ON_EDIT_TASK_FAIL = 'ON_EDIT_TASK_FAIL';
+
 export const ON_NEW_TASK_RECEIVED = 'ON_NEW_TASK_RECEIVED';
 
 export const ON_TASK_DELETE = 'ON_TASK_DELETE';
@@ -68,13 +72,25 @@ export const onTaskChangeStatus = (task: ITask, status: number): onTaskChangeSta
     }
 }
 
-export const onCreateNewTask = (name: string, recipient: string, startDate: Date) => {
+export const onCreateNewTask = (name: string, text: string, recipient: string, startDate: Date) => {
     return {
         type: ON_CREATE_NEW_TASK,
         payload: {
             name,
+            text,
             recipient,
             startDate
+        }
+    }
+}
+
+export const onEditTask = (id: number, name: string, text: string) => {
+    return {
+        type: ON_EDIT_TASK,
+        payload: {
+            id,
+            name,
+            text
         }
     }
 }

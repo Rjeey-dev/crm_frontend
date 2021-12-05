@@ -1,8 +1,7 @@
 export interface WithModalOpenHoFProps {
-    modalText: string,
-    handler: any
+    classes?: string
 }
 
 export interface WithModalOpenNative {
-
+    onCloseCallback: () => void
 }

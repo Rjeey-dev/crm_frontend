@@ -11,7 +11,7 @@ import {IBaseState} from "store/interfaces";
 export const ADD_NEW_TASK_FORM = 'addNewTask';
 
 const onSubmit = (data: any, dispatch: Dispatch) => {
-    dispatch(onCreateNewTask(data['name'], data['recipient'], data['start_date']));
+    dispatch(onCreateNewTask(data['name'], data['text'], data['recipient'], data['start_date']));
 };
 
 const AddTask = reduxForm({

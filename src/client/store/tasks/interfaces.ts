@@ -12,6 +12,7 @@ export const TASK_STATUS_DONE = 2;
 export interface ITask {
     id: number,
     name: string,
+    text: string,
     status: number,
     created: Date,
     recipient: ITaskUser,

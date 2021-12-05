@@ -7,12 +7,18 @@ import DashboardPage from "pages/DashboardPage";
 import DeniedPage from "pages/DeniedPage";
 import HomePage from "pages/HomePage";
 import NotFoundPage from "pages/NotFoundPage";
+import StatisticsPage from "pages/StatisticsPage";
 
 const Routes = [
     {
         path: paths.URL_DASHBOARD,
         exact: true,
         component: withSecurity(DashboardPage),
+    },
+    {
+        path: paths.URL_STATISTICS,
+        exact: true,
+        component: withSecurity(StatisticsPage),
     },
     {
         path: paths.URL_AUTH_GOOGLE_REDIRECT,

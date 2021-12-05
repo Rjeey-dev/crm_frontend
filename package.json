@@ -111,7 +111,7 @@
     "react-currency-formatter": "^1.1.0",
     "react-data-table-component": "^6.11.6",
     "react-date-range": "^1.0.0-beta",
-    "react-datepicker": "^4.3.0",
+    "react-datepicker": "^4.5.0",
     "react-dev-utils": "^8.0.0",
     "react-dom": "^16.8.6",
     "react-dropzone": "^11.2.4",

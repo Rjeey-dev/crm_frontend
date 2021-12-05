@@ -4,7 +4,7 @@ import {makeHttpCall} from "store/sagas";
 
 import {ITasks} from "services/api/tasks/interfaces";
 import {
-    ON_CREATE_NEW_TASK, ON_NEW_TASK_RECEIVED,
+    ON_CREATE_NEW_TASK, ON_EDIT_TASK, ON_NEW_TASK_RECEIVED,
     ON_TASK_CHANGE_STATUS, ON_TASK_DELETE, ON_TASK_DELETE_SUCCESS, ON_TASK_DELETED_BY_OWNER,
     ON_TASKS_BOARD_INITIALIZED, onTaskDeleteSuccess, onTasksBoardInitialized,
     onTasksBoardInitializedFailed,
@@ -24,7 +24,7 @@ export function* watchTasksBoardInitialized(tasks: ITasks): SagaIterator {
 
             return;
         }
-
+        yield put(onEntitiesShouldBeCleaned(KEY_TASKS));
         // @ts-ignore
         yield put(onTasksBoardInitializedSuccess(response.items));
         // @ts-ignore
@@ -36,10 +36,10 @@ export function* watchTasksBoardInitialized(tasks: ITasks): SagaIterator {
 
 export function* watchTaskChangeStatus(tasks: ITasks, event: onTaskChangeStatusEvent): SagaIterator {
     try {
-        const response = yield makeHttpCall([tasks, tasks.update], event.payload.task.id, {status: event.payload.status});
+        yield makeHttpCall([tasks, tasks.update], event.payload.task.id, {status: event.payload.status});
 
-        // @ts-ignore
-        yield put(onEntitiesFetchedSuccessful([response], KEY_TASKS));
+        yield put(onEntitiesShouldBeCleaned(KEY_TASKS));
+        yield put(onTasksBoardInitialized());
     } catch (e) {
         yield put(onTasksBoardInitializedFailed());
     }
@@ -49,12 +49,27 @@ export function* watchCreateNewTask(tasks: ITasks, event: any): SagaIterator {
     try {
         const response = yield makeHttpCall([tasks, tasks.create],{
             name: event.payload.name,
+            text: event.payload.text,
             recipient: event.payload.recipient,
             start_date: event.payload.startDate,
         });
 
         // @ts-ignore
         yield put(onEntitiesFetchedSuccessful([response], KEY_TASKS));
+    } catch (e) {
+        yield put(onTasksBoardInitializedFailed());
+    }
+}
+
+export function* watchEditTask(tasks: ITasks, event: any): SagaIterator {
+    try {
+        yield makeHttpCall([tasks, tasks.update], event.payload.id, {
+            name: event.payload.name,
+            text: event.payload.text
+        });
+
+        yield put(onEntitiesShouldBeCleaned(KEY_TASKS));
+        yield put(onTasksBoardInitialized());
     } catch (e) {
         yield put(onTasksBoardInitializedFailed());
     }
@@ -83,6 +98,7 @@ export default function* ({ tasks }: {tasks: ITasks}): SagaIterator {
     yield takeLatest(ON_TASKS_BOARD_INITIALIZED, watchTasksBoardInitialized, tasks);
     yield takeLatest(ON_TASK_CHANGE_STATUS, watchTaskChangeStatus, tasks);
     yield takeLatest(ON_CREATE_NEW_TASK, watchCreateNewTask, tasks);
+    yield takeLatest(ON_EDIT_TASK, watchEditTask, tasks);
     yield takeLatest(ON_TASK_DELETE, watchTaskDelete, tasks);
     yield takeLatest(ON_TASK_DELETE_SUCCESS, watchTaskDeleteSuccess);
     yield takeLatest(ON_NEW_TASK_RECEIVED, watchNewTaskReceived);
